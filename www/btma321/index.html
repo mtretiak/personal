@@ -1,0 +1,397 @@
+<!--<!DOCTYPE html>-->
+
+<!--/*************************************************************
+BTMA 321
+Codecademy Assignment
+
+Student Numbers
+10101384 | 10173301 | 30027854
+
+Purpose:
+Design a website using HMTL and CSS only.
+Complete the modules on codecademy's website.
+
+Design:
+index, presentation, project_update, video, about-us
+This website will grow as our project does.
+CSS stylesheet has been kept in the same folder for easy of reading
+for other group members.
+Major commenting left on index page
+
+To Do:
+Clean up, compile into files, optimize
+*************************************************************/-->
+
+<html>
+
+<head>
+    <title>
+        BTMA Group 1
+    </title>
+
+
+    <!--hot link to google fonts lato -->
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <!--CSS-->
+    <!--layout from bottom to top of page-->
+    <style>
+
+
+        body{
+
+            padding:0;
+            margin:0;
+            height:100%;
+            font-family: "Lato";
+        }
+
+        #text-area-container2{
+            height: 100% auto;
+            width: 98%;
+            background-color: white;
+            opacity: .7;
+            position: relative;
+            float:left;
+            margin: 0px 10px 0px 10px;
+            z-index:1;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+        }
+
+        #text-area2{
+
+            margin-left:10px;
+            margin-right: 10px;
+            margin-bottom: 5px;
+            margin-top: 0px;
+            float:left;
+
+        }
+
+        #image-container{
+
+            height: 200px;
+            width: 300px;
+            background-color: black;
+            /*opacity:.5;*/
+            position: relative;
+            float: left;
+            margin: 10px;
+            left:5%;
+            right:2%;
+            top:8%;
+
+        }
+
+        #image-text-container{
+            height:auto;
+            width:300px;
+            /*background-color: white;*/
+            /*opacity: .7;*/
+            position: relative;
+            float: right;
+            z-index: 1;
+            margin-top: 10px;
+            margin-bottom: 50px;
+            /*border: solid 2px red;*/
+            /*border-radius: 5px;*/
+            right:5%;
+
+        }
+
+        #image-holder{
+
+            height:400px;
+            width: 905px;
+            border:solid white 2px;
+            border-radius: 5px;
+            z-index:1;
+            position: relative;
+            float:left;
+            margin-top:220px;
+            margin-bottom: -10px;
+
+
+            left: 50%;
+            /*Webkit to center everything on page automatically*/
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+
+        #text-area-container{
+            height: 100% auto;
+            width: 98%;
+            background-color: white;
+            opacity: .7;
+            position: relative;
+            float:left;
+            margin: 10px 10px 0px 10px;
+            z-index:1;
+            border-radius: 5px;
+        }
+
+        #text-area{
+
+            margin-left:10px;
+            margin-right: 10px;
+            float:left;
+
+        }
+
+
+        #video-container{
+            z-index: 2;
+            background-color: black;
+            float: left;
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            margin-top: 300px;
+
+            /*Webkit to center everything on page automatically*/
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+            /*webkit for fade in effect, each line for different browser*/
+            -webkit-animation: fadein 4s;
+            -moz-animation: fadein 4s;
+            -ms-animation: fadein 4s;
+            -o-animation: fadein 4s;
+            animation: fadein 4s;
+
+            margin-bottom: -120px;
+
+        }
+
+        /*webkit fade in*/
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        /* Safari, Chrome and Opera */
+        @-webkit-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+
+
+        #background{
+            /*hot link example for background*/
+            background-image: url("https://jdcwest.org/wp-content/uploads/2015/07/TFDL_011A9240_F.jpg");
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            position:fixed;
+            opacity: .5;
+        }
+
+        #menu-bar-container{
+            border-top:1px solid #CCCCCC;
+            background-color: rgb(79, 79, 79);
+            width:100%;
+            height:72px;
+            position: fixed;
+            /*opacity: 0.9;*/
+            float:left;
+            z-index:5;
+
+        }
+
+        /*example of using css for single embedded section*/
+        #menu-bar-container h1 a{
+            text-decoration: underline;
+            color: white;
+        }
+
+        /*youtube container*/
+        #menu-bar-container iframe{
+            opacity: 1;
+        }
+
+        #menu-bar-2-container{
+            background-color: rgb(79, 79, 79);
+            width: 100%;
+            height: 40px;
+            position: relative;
+            z-index:2;
+        }
+
+        #menu-bar-2{
+            width:100%;
+            margin:0 ;
+            height: 45px;
+            margin-left: 66px;
+        }
+
+        #menu-bar-2 a{
+            color:white;
+            text-decoration: none;
+            width:100%;
+
+            padding:0 10px;
+            border-right: 1px solid rgb(82, 167, 76);
+
+
+            font-size: 18px;
+            position: relative;
+            top: 5px;
+        }
+
+
+        #menu-bar{
+            width:100%;
+            margin:0;
+            padding: 0px;
+            position: relative;
+          }
+
+
+        h1{
+            padding:0;
+            margin:0;
+            color: white;
+            font-size: 40px;
+            font-weight: normal;
+            padding-top: 10px;
+            padding-left:10px;
+        }
+
+        h1 img{
+            position: relative;
+            top:12px;
+            height:50px;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <div id="background">
+    </div>
+
+
+    <div id="menu-bar-container">
+            <div id="menu-bar">
+                <!--example of local link to image, and hot link with style change to herox-->
+                <!--Implement hover so visitor knows its link?-->
+                <h1><img src="../btma321/img/logo.png">BuzzOn: <a href="https://herox.com/SafeCampus">Safe Campus Challenge</a>
+                    </h1>
+            </div>
+
+            <!--pages links in menu bar-->
+            <div id="menu-bar-2-container">
+                <div id="menu-bar-2">
+                    <a href="index.html">Home</a>
+                    <a href="project_update.html">Project Update</a>
+                    <a href="video.html">Video</a>
+                    <a href="presentation.html">Presentation</a>
+                    <a href="about-us.html">About Us</a>
+                </div>
+            </div>
+    </div>
+
+
+    <!--embedded link from youtube-->
+    <div id="video-container">
+        <iframe  allowtransparency="false" width="560" height="315" src="https://www.youtube.com/embed/OLuqvMrDOzw" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+
+    <!--first text area-->
+    <div id="text-area-container">
+        <div id="text-area">
+            <p style="font-size: 30px; text-decoration:underline; margin-bottom: 0;">Project Concept</p>
+
+            <!-- examples of unordered list-->
+            <ul id="project-concept">
+                <li>
+                    Our project is to create a device to help make university campuses safe for university students.
+                    We were inspired by the
+                    <a href="https://herox.com/SafeCampus" style="color:black">heroX Safe Campus Challenge</a>,
+                    which challenges students to identify the root
+                    causes of sexual assault on campus, as well as recommend a solution for their campus. We aim to provide
+                    a solution to the University of Calgary. Furthermore, we aim to go one step further and design a safety
+                    device that all students can use on campus to feel safer.
+                </li>
+                <li>
+                    Success would look like helping to reduce sexual assaults and other crimes committed on campus, and the
+                    possible implementation of our device into the new sexual violence policy which was recently approved
+                    by the Board of Governors at the
+                    University of Calgary<sup><a href="https://www.ucalgary.ca/policies/files/policies/sexual-violence-policy.pdf">1</a></sup>.
+                </li>
+            </ul>
+
+            <p style="font-size: 30px; text-decoration:underline; margin-bottom:0;">Measurable Organizational Value</p>
+            <ul>
+                <li id="mov">Currently, our Measurable Organizational Value (MOV) would be to design a successful device,
+                    and gain partnerships to help produce and sell our device to students at the University of Calgary
+                    with the aim of reducing the number of crimes committed on campus. Our long term goal will be to
+                    expand our business to all other major Canadian university to help reduce the amount of violent crimes
+                    on campuses. Additionally, we have plans to expand our users to the families and others that would gain
+                    benefit from our device.</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <div id="image-holder">
+        <div id="image-container">
+            <img src="../btma321/img/braclet.jpg" style="width: 500px; border-radius: 5px; float: left;">
+        </div>
+        <div id="image-text-container">
+            <ul>
+                <li style="font-size: 30px">BuzzOn Bracelet Prototype</li>
+                <ul>
+                    <li>BuzzOn focuses on keeping students safe on campus.
+                        Our product is functional and stylish at the same time.</li>
+                    <li>Core of the unit is detachable from the band and will have functionality to attach to other
+                    holders over time.</li>
+                    <li>We have focused on a product that everyone is comfortable wearing and will fit with anyone's
+                    style yet provide quick access for them when help is needed.</li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+
+    <div id="image-holder" style="margin-top: 25px">
+
+        <div id="image-text-container">
+            <ul>
+                <li style="font-size: 30px">BuzzOn App Prototype</li>
+                <ul>
+                    <li>The buzzOn app allows user to activate an emergency alarm right from their phone</li>
+                    <li>The app also allows user to easily set up emergency contacts and personal info from their device </li>
+
+                </ul>
+            </ul>
+        </div>
+
+        <div id="image-container">
+            <iframe width="500" height="300" src="https://www.youtube.com/embed/R8_ekBva_3E" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div id="text-area-container2">
+        <div id="text-area2">
+            <p style="font-size: 15px; text-decoration:underline">* This website will grow as our project progresses.
+                Please check back Later for more information. *</p>
+        </div>
+    </div>
+</body>
+</html>

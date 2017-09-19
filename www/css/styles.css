@@ -1,0 +1,46 @@
+.menu {
+    height: 100px;
+    background-color: #B2D6FF;    /* Medium blue */
+}
+
+.sidebar {
+    height: 300px;
+    float: left;
+    width: 200px;                 /* Add this */
+    background-color: #F09A9D;    /* Red */
+}
+
+.content {
+    height: 500px;
+    float:left;
+    width:650px;
+    background-color: #F5CF8E;    /* Yellow */
+}
+
+.page {
+    width: 900px;
+    margin: 0 auto;
+
+
+}
+
+.column {
+
+    float: left;
+    width: 31%;
+    margin: 20px 1.15%;
+    height: auto;
+    background-color: #B2D6FF;    /* Medium blue */
+}
+
+.container{
+    overflow: hidden;
+    background-color: #EAEDF0;
+}
+
+.footer {
+    height: 200px;
+    clear: both;
+
+    background-color: #D6E9FE;    /* Light blue */
+}

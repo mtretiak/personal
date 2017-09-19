@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<!--/*************************************************************
+BTMA 321
+Codecademy Assignment
+
+Student Numbers
+10101384 | 10173301 | 30027854
+
+Purpose:
+Design a website using HMTL and CSS only.
+Complete the modules on codecademy's website.
+
+Design:
+index, presentation, project_update, video, about-us
+This website will grow as our project does.
+CSS stylesheet has been kept in the same folder for easy of reading
+for other group members.
+Major commenting left on index page
+*************************************************************/-->
+
+<html>
+
+<head>
+    <title>
+        BTMA Group 1
+    </title>
+
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <style>
+
+        body{
+            padding:0;
+            margin:0;
+            font-family: "Lato";
+        }
+
+        #text-area-container{
+            height: auto;
+            width: 98%;
+            /*background-color: white;*/
+            /*opacity: .7;*/
+            position: relative;
+            float:left;
+            margin: 120px 0px 10px 10px;
+            z-index:1;
+        }
+
+        #text-area{
+            margin-left:10px;
+            float:left;
+        }
+
+        #background{
+            background-image: url("../btma321/img/downtown.jpg");
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            position:fixed;
+            opacity: .5;
+        }
+
+        #menu-bar-container{
+            border-top:1px solid #CCCCCC;
+            background-color: rgb(79, 79, 79);
+            width:100%;
+            height:72px;
+            position: fixed;
+            /*opacity: 0.9;*/
+            float:left;
+            z-index:5;
+        }
+
+        #menu-bar-container h1 a{
+
+            text-decoration: underline;
+            color: white;
+        }
+
+        #menu-bar-container iframe{
+            opacity: 1;
+        }
+
+        #menu-bar-2-container{
+            background-color: rgb(79, 79, 79);
+            width: 100%;
+            height: 40px;
+            position: relative;
+            z-index:2;
+        }
+
+        #menu-bar-2{
+            width:100%;
+            margin:0 ;
+            height: 45px;
+            margin-left: 66px;
+
+        }
+
+        #menu-bar-2 a{
+            color:white;
+            text-decoration: none;
+            width:100%;
+            padding:0 10px;
+            border-right: 1px solid rgb(82, 167, 76);
+            font-size: 18px;
+            position: relative;
+            top: 5px;
+        }
+
+        #menu-bar{
+            width:100%;
+            margin:0;
+            padding: 0px;
+            /*overflow: scroll;*/
+            position: relative;
+        }
+
+        h1{
+            padding:0;
+            margin:0;
+            color: white;
+            font-size: 40px;
+            font-weight: normal;
+            padding-top: 10px;
+            padding-left:10px;
+        }
+
+        h1 img{
+            position: relative;
+            top:12px;
+            height:50px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <div id="background">
+    </div>
+
+
+    <div id="menu-bar-container">
+        <div id="menu-bar">
+            <h1><img src="../btma321/img/logo.png">BuzzOn: <a href="https://herox.com/SafeCampus">Safe Campus Challenge</a>
+            </h1>
+
+        </div>
+
+
+        <div id="menu-bar-2-container">
+
+            <div id="menu-bar-2">
+                <a href="index.html">Home</a>
+                <a href="project_update.html">Project Update</a>
+                <a href="video.html">Video</a>
+                <a href="presentation.html">Presentation</a>
+                <a href="about-us.html">About Us</a>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="text-area-container">
+        <div id="text-area">
+
+            <p style="font-size: 30px">Project Update</p>
+
+            <object data="../btma321/doc/Group1_Project_Update.pdf" type="application/pdf" width="612px" height="792px">
+                <iframe src="../btma321/doc/Group1_Project_Update.pdf" width="100%" height="100%" style="border: none;">
+                    This browser does not support PDFs. Please download the PDF to view it: <a href="../btma321/doc/Group1_Project_Update.pdf">Download PDF</a>
+                </iframe>
+            </object>
+    </div>
+    </div>
+</body>
+</html>
